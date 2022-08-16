@@ -9,13 +9,15 @@ import { YesNoPipe } from './yes-no.pipe';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { authInterceptorProviders } from './Helpers/auth.interceptor';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShiftsComponent,
     YesNoPipe,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -21,8 +21,6 @@ export class ShiftsComponent implements OnInit {
 
   ngOnInit(): void {
 
-        
-   
     this.shiftService.getShifts().subscribe(
       (response:Shift[])=>{this.shifts = response;
       },
