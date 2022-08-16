@@ -24,15 +24,16 @@ export class AppComponent {
       this.showAdminUser = this.roles.includes('Admin');
       this.showUserUser = this.roles.includes('User');
       this.username = user.username;
+    } else {
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['']);}); 
     }
-  
+
   }
   logout(): void {
     this.tokenStorageService.signOut();
-  //  window.location.reload();  
-     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['']);}); 
-    
+    window.location.reload();  
   }
+
 }
 

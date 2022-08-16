@@ -38,12 +38,10 @@ export class ShiftsComponent implements OnInit {
         if(this.currentShift.lunchActive){this.lunchActive=true;}
         },
         (err:HttpErrorResponse)=>{
-          alert(err.error.message);}
+          console.log(err.error.message);}
       );
 
         });
-
-  
  
   }
 
